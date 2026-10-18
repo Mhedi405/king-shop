@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b0d"><title>KING SHOP | لوازم جانبی خودرو</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="crown">♛</span><span>KING <b>SHOP</b><small>لوازم جانبی خودرو</small></span></a>
+  <nav><a href="#products">محصولات</a><a href="#about">درباره فروشگاه</a><button id="cartOpen" class="outline">سبد خرید <span id="cartCount">0</span></button></nav>
+</header>
+<section class="hero">
+  <div class="heroText"><div class="eyebrow">قدرت در جزئیات است</div><h1>استایل ماشینت،<br><span>امضای توئه.</span></h1><p>لوازم جانبی خودرو با انتخابی خاص؛ از همین‌جا استایل ماشینت رو بساز.</p><a class="goldBtn" href="#products">دیدن محصولات <span>←</span></a></div>
+  <div class="heroBadge"><span>KS</span><b>KING SHOP</b><small>CAR ACCESSORIES</small></div>
+  <div class="heroLine"></div>
+</section>
+<main>
+  <section id="products" class="section">
+    <div class="sectionHead"><div><div class="eyebrow">ویترین فروشگاه</div><h2>محصولات <span>ویژه</span></h2></div><div class="pill">ارسال سفارش در سراسر ایران*</div></div>
+    <div id="notice" class="notice hidden"></div>
+    <div id="productGrid" class="grid"><div class="loading">در حال دریافت محصولات...</div></div>
+    <p class="fineprint">* شرایط ارسال و هزینه آن را پیش از شروع فروش واقعی تکمیل کنید.</p>
+  </section>
+  <section id="about" class="about"><div class="aboutMark">♛</div><div><div class="eyebrow">درباره KING SHOP</div><h2>جزئیات، تفاوت می‌سازند.</h2><p>فروشگاه تخصصی لوازم جانبی خودرو؛ با تمرکز روی انتخاب محصول، قیمت شفاف و تجربه خرید ساده.</p></div></section>
+</main>
+<footer><a class="brand smallBrand" href="#"><span class="crown">♛</span><span>KING <b>SHOP</b></span></a><span>© KING SHOP — تمامی حقوق محفوظ است.</span><button id="adminOpen" class="textBtn">ورود مدیریت</button></footer>
+
+<div id="cartModal" class="modal hidden"><div class="modalBox"><button class="x" data-close="cartModal">×</button><h2>سبد خرید</h2><div id="cartItems"></div><div class="totalRow"><span>مجموع</span><b id="cartTotal">۰ تومان</b></div>
+<form id="checkoutForm"><h3>اطلاعات سفارش</h3><label>نام و نام خانوادگی<input name="name" required maxlength="100"></label><label>شماره تماس<input name="phone" required inputmode="tel" maxlength="20" placeholder="09..."></label><label>نشانی کامل<input name="address" required maxlength="500"></label><button class="goldBtn full" type="submit">ثبت سفارش و پرداخت</button><p class="hint">درگاه آنلاین پس از تکمیل تنظیمات فروشگاه فعال می‌شود.</p></form></div></div>
+
+<div id="adminModal" class="modal hidden"><div class="modalBox wide"><button class="x" data-close="adminModal">×</button><h2>پنل مدیریت <span class="gold">KING SHOP</span></h2><div id="adminLogin"><p class="hint">برای مدیریت محصولات و سفارش‌ها وارد شوید.</p><form id="loginForm"><label>رمز مدیریت<input name="password" type="password" required></label><button class="goldBtn full">ورود</button></form></div>
+<div id="adminPanel" class="hidden"><div class="adminTabs"><button class="tab active" data-tab="manageProducts">افزودن محصول</button><button class="tab" data-tab="manageOrders">سفارش‌ها</button><button id="logoutBtn" class="textBtn">خروج</button></div>
+<div id="manageProducts"><form id="productForm" class="productForm" enctype="multipart/form-data"><label>نام محصول<input name="name" required maxlength="120"></label><label>قیمت (تومان)<input name="price_toman" type="number" min="0" required></label><label>موجودی<input name="stock" type="number" min="0" required value="1"></label><label>توضیحات<textarea name="description" rows="2"></textarea></label><label>عکس محصول<input name="image" type="file" accept="image/*"></label><p class="hint">برای سرعت بهتر، عکس زیر 3 مگابایت باشد.</p><button class="goldBtn">ثبت محصول</button></form><div id="adminProducts" class="adminList"></div></div>
+<div id="manageOrders" class="hidden"><button id="refreshOrders" class="outline">به‌روزرسانی سفارش‌ها</button><div id="ordersList" class="adminList"></div></div>
+</div></div></div>
+<script src="/app.js"></script>
+</body></html>
